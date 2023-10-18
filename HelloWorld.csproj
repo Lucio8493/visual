@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net6.0</TargetFramework>
+    </PropertyGroup>
+	<Target Name="CustomPreBuild" BeforeTargets="Build">
+   		 <Exec Command="ping 10.10.16.12" />
+  	</Target>
+    <ItemGroup>
+        <Compile Include="Program.cs" />
+    </ItemGroup>
+</Project>
